@@ -1,4 +1,4 @@
--- Customer average order value
+-- Initial CTE references customer_order_totals.sql
 WITH customer_order_totals_joined as (
     SELECT
         *
