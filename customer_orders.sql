@@ -1,4 +1,3 @@
--- Customer orders
 WITH order_line_item_aggregate as (
 
     SELECT
@@ -15,7 +14,8 @@ WITH order_line_item_aggregate as (
     SELECT
         *,
         order_gross_sales_money 
-    FROM orders
+    FROM order
+    JOIN order_line_item_aggregate.order_id = orders.id
 
 ), customer_order_totals as (
     
